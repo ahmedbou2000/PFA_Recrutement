@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ProfilType extends AbstractType
 {
@@ -43,16 +44,15 @@ class ProfilType extends AbstractType
                 'label_attr' => [
                     'class' => 'form-label mt-4'
                 ]
-            ]);
-            // ->add('domaine', NumberType::class, [
-            //     'attr' => [
-            //         'class' => 'form-control'
-            //     ],
-            //     'label' => 'Domaine',
-            //     'label_attr' => [
-            //         'class' => 'form-label mt-4'
-            //     ]
-            // ])
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-info mt-4'
+                ],
+                'label' => 'Modifier le profile'
+            ])
+            ;
+            
             
     }
 

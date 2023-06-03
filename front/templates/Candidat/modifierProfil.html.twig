@@ -1,10 +1,42 @@
 {% extends 'layoutAdmin.html.twig' %}
 
-{% block title %}Modification du profile{% endblock %}
-{% block titlePage %}Modification du profile{% endblock %}
+{% block title %}Modification du profile
+{% endblock %}
+{% block titlePage %}Modification du profile
+{% endblock %}
 {% block body %}
 
-    {{form(form)}}
+	{{form_start(form)}}
+	<div class="form-group">
+		{{form_label(form.experience)}}
+		{{form_widget(form.experience)}}
+		<div class="form-error">
+			{{form_errors(form.experience)}}
+		</div>
+	</div>
+
+	<div class="form-group">
+		{{form_label(form.details)}}
+		{{form_widget(form.details)}}
+		<div class="form-error">
+			{{form_errors(form.details)}}
+		</div>
+	</div>
+
+	<div class="form-group">
+		{{form_label(form.prixParHeure)}}
+		{{form_widget(form.prixParHeure)}}
+		<div class="form-error">
+			{{form_errors(form.prixParHeure)}}
+		</div>
+	</div>
+	{% for message in app.session.flashBag.get('Success') %}
+		<div class="alert alert-success mt-4">
+			{{message}}
+		</div>
+	
+	{% endfor %}
+	{{form_end(form)}}
 
 
 {% endblock %}
