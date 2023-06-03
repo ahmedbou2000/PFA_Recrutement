@@ -1,0 +1,83 @@
+{% extends 'base.twig' %}
+{% block style %}{% endblock %}
+{% block header %}
+
+    <div class="navbar-area fixed-top">
+
+        <div class="mobile-nav">
+            <a href="index-2.html" class="logo">
+                <img src="{{ asset('assets/img/logo-three.png') }}" alt="Logo">
+            </a>
+        </div>
+
+        <div class="main-nav three">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="index-2.html">
+                        <img src="{{ asset('assets/img/logo-three.png') }}" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="{{ path('admin_admins') }}" class="nav-link dropdown-toggle">Admin </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ path('admin_profils') }}" class="nav-link dropdown-toggle">Profils </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ path('admin_offres') }}" class="nav-link dropdown-toggle">Offres </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ path('admin_profils') }}" class="nav-link dropdown-toggle">Recruteur </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="side-nav three">
+                            <a class="login-left" href="register.html">
+                                {{ app.user.nom|upper~' '~ app.user.prenom|capitalize }}
+                            </a>
+                            <a class="btn-danger btn" href="{{ path('logout') }}">
+                                <i class="flaticon-enter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-title-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="title-item">
+                        <h2>{% block title %}{% endblock %}</h2>
+                        <ul>
+                            <li>
+                                <img src="{{ asset('assets/img/home-three/title-img-two.png') }}" alt="Image">
+                                <a href="{{ path('home_admin') }}">Home</a>
+                            </li>
+                            <li>
+                                <span>/</span>
+                            </li>
+                            <li>
+                                {% block titlePage %}{% endblock %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block body %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}

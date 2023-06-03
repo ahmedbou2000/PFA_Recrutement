@@ -1,0 +1,38 @@
+
+###> symfony/framework-bundle ###
+/front/.env.local
+/front/.env.local.php
+/front/.env.*.local
+/front/config/secrets/prod/prod.decrypt.private.php
+/front/public/bundles/
+/front/var/
+/front/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/front/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/front/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+
+
+
+
+###> symfony/framework-bundle ###
+/back/.env.local
+/back/.env.local.php
+/back/.env.*.local
+/back/config/secrets/prod/prod.decrypt.private.php
+/back/public/bundles/
+/back/var/
+/back/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/back/phpunit.xml
+

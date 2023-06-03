@@ -1,0 +1,20 @@
+{% block form_row %}
+<div class="form-group">
+    {{ form_label(form) }}
+{{ form_widget(form,
+    {'attr':
+        {'class':'form-control'}
+    }
+) }}
+</div>
+
+{% if form_errors(form) %}
+<div class="pb-0 alert alert-danger">{{ form_errors(form) }}</div>
+{% endif %}
+{% endblock %}
+
+<style>
+    ul{
+        list-style: none !important;
+    }
+</style>
